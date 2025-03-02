@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo "Pre-commit hook. Verifying that your changes don't break things."
+echo "================================================================"
+echo
+
+# Run tests without showing output
+npm run test:flowapowa > /dev/null
+
+# If tests fail, then exit with error, aborting the commit operation
+if [[ "$?" -ne 0 ]]; then
+    echo "KO. Some tests are failing. We want tests passing before commit."
+    echo
+    echo "Please, rethink your approach,  fix the failing tests and try again."
+    exit 1
+else
+    echo "OK. Congratulations. You can push this commit. TBD for the win!"
+    exit 0
+fi
+
