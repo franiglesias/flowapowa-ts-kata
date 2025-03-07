@@ -94,7 +94,7 @@ npm run test:flowapowa
 
 Add the provided `pre-commit` hook to allow **git** to run the all the _flowapowa_ tests before sending the commit. If the commit breaks the tests it will notify you, and it will stop the commit. Alternatively, you can use the [LimitedWIP plugin](https://plugins.jetbrains.com/plugin/7655-limited-wip).
 
-Run this from the root of the `trainings` project to copy the hook to the `.git/hooks` folder. It will overwrite your existing pre-commit script if any.
+Run this from the root of the project to copy the hook to the `.git/hooks` folder. It will overwrite your existing pre-commit script if any.
 
 ```bash
 cp hooks/pre-commit .git/hooks/pre-commit
